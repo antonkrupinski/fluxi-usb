@@ -2,34 +2,26 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<title>Fluxi - STARSCLM</title>
-<script>
-  window.onload = function() {
-    // Open the local file in a new tab
-    window.open('file:///media/removable/ESD-USB/fluxi-login.html', '_blank');
-  }
-</script>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    padding: 20px;
-  }
-  a {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-  }
-</style>
+<title>iframe about:blank example</title>
 </head>
 <body>
 
-<h1>Welcome</h1>
-<p>The local file is opening in a new tab...</p>
+<h1>Iframe initially loads about:blank</h1>
 
-<h2>Links to open in new tabs</h2>
-<a href="file:///media/removable/ESD-USB/fluxi-login.html" target="_blank">Fluxi Login</a>
-<a href="file:///media/removable/ESD-USB/fluxi-hub.html#" target="_blank">Fluxi Hub</a>
-<a href="file:///media/removable/ESD-USB/admin-panel.html" target="_blank">Admin Panel</a>
+<iframe id="myFrame" width="100%" height="600px"></iframe>
+
+<script>
+  const iframe = document.getElementById('myFrame');
+
+  // Initially, iframe loads about:blank
+  iframe.src = 'about:blank';
+
+  // After some delay, navigate iframe to your local file
+  setTimeout(() => {
+    // This will likely be blocked if local file access is restricted
+    iframe.src = 'file:///media/removable/ESD-USB/fluxi-login.html';
+  }, 2000);
+</script>
 
 </body>
 </html>
