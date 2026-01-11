@@ -2,48 +2,34 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<title>Full Screen Iframes with Links</title>
+<title>Fluxi - STARSCLM</title>
+<script>
+  window.onload = function() {
+    // Open the local file in a new tab
+    window.open('file:///media/removable/ESD-USB/fluxi-login.html', '_blank');
+  }
+</script>
 <style>
-  html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
   }
-  iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-  }
-  .links {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    background: rgba(255,255,255,0.8);
-    padding: 10px;
-    z-index: 9999;
-  }
-  .links a {
+  a {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     font-weight: bold;
   }
 </style>
 </head>
 <body>
 
-<div class="links">
-  <a href="file:///media/removable/ESD-USB/fluxi-login.html" target="_blank">Open Fluxi Login in New Tab</a>
-  <a href="file:///media/removable/ESD-USB/fluxi-hub.html#" target="_blank">Open Fluxi Hub in New Tab</a>
-  <a href="file:///media/removable/ESD-USB/admin-panel.html" target="_blank">Open Admin Panel in New Tab</a>
-</div>
+<h1>Welcome</h1>
+<p>The local file is opening in a new tab...</p>
 
-<!-- Full screen iframes (you can choose to display only one at a time, or all as needed) -->
-
-<!--
-<iframe src="file:///media/removable/ESD-USB/fluxi-login.html"></iframe>
-<iframe src="file:///media/removable/ESD-USB/fluxi-hub.html#"></iframe>
-<iframe src="file:///media/removable/ESD-USB/admin-panel.html"></iframe>
--->
+<h2>Links to open in new tabs</h2>
+<a href="file:///media/removable/ESD-USB/fluxi-login.html" target="_blank">Fluxi Login</a>
+<a href="file:///media/removable/ESD-USB/fluxi-hub.html#" target="_blank">Fluxi Hub</a>
+<a href="file:///media/removable/ESD-USB/admin-panel.html" target="_blank">Admin Panel</a>
 
 </body>
 </html>
